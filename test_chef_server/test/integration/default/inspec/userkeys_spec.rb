@@ -11,8 +11,8 @@ describe command('/go/src/chefapi_test/bin/userkeys') do
   its('stdout') { should match(/^List after add usr1 keys \[\{(?=.*newkey)(?=.*default).*\}\]/) }
   its('stdout') { should match(%r{^Add usr3 key \{KeyName: Uri:https://testhost/users/usr3/keys/default Expired:false\}}) }
   its('stdout') { should match(/^List after add usr3 keys \[\{(?=.*default).*\}\]/) }
-  its('stdout') { should match(/^Key detail usr1 default \{KeyName:default/) }
-  its('stdout') { should match(/^Key update output usr1 default \{KeyName:default .*N0AIhUh7Fw1\+gQtR\+.*\}/) }
-  its('stdout') { should match(/^Updated key detail usr1 default \{KeyName:default .*N0AIhUh7Fw1\+gQtR\+.*\}/) }
-  its('stdout') { should match(/^List delete result usr1 keys \{KeyName:default .*N0AIhUh7Fw1\+gQtR\+.*\}/) }
+  its('stdout') { should match(/^Key detail usr1 default \{Name:default/) }
+  its('stdout') { should match(/^Key update output usr1 default \{Name:default .*N0AIhUh7Fw1\+gQtR\+.*\}/) }
+  its('stdout') { should match(/^Updated key detail usr1 default \{Name:default .*N0AIhUh7Fw1\+gQtR\+.*\}/) }
+  its('stdout') { should match(/^List delete result usr1 keys \{Name:default .*N0AIhUh7Fw1\+gQtR\+.*\}/) }
 end
