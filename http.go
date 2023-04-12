@@ -340,6 +340,7 @@ func (c *Client) magicRequestDecoder(method, path string, body io.Reader, v inte
 
 // NewRequest returns a signed request  suitable for the chef server
 func (c *Client) NewRequest(method string, requestUrl string, body io.Reader) (*http.Request, error) {
+log.Info("ENTERED go-chef/http.go NewRequest")
 	relativeUrl, err := url.Parse(requestUrl)
 	if err != nil {
 		return nil, err
